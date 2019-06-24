@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Contact works!</h2>
+  <form>
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input required ngModel name="firstName"  #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form-control">
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">First Name is required!</div>
+    </div>
+    <div class="form-group">
+      <label for="comment">Comment</label>
+      <textarea id="comment" class="form-control" rows="10" cols="30"></textarea>
+    </div>
+    <button class="btn btn-primary">Click</button>
+  </form>
+</div>
